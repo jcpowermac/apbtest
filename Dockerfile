@@ -1,4 +1,4 @@
-FROM apb-base
+FROM jcpowermac/apb-examples
 
 COPY playbooks /opt/apb/actions
 
