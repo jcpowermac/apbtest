@@ -1,0 +1,32 @@
+- name: Testing
+  hosts: localhost
+  gather_facts: True
+  connection: local
+  tasks:
+    - debug:
+        msg: "{{ hostvars[inventory_hostname] }}"
+    - find:
+        paths: "/opt/"
+        recurse: True
+      register: opt
+
+    - debug:
+        msg: "{{ opt }}"
+
+    - find:
+        paths: "/.kube/"
+        recurse: True
+      register: kube
+
+    - debug:
+        msg: "{{ kube }}"
+
+    - find:
+        paths: "/.ansible/"
+        recurse: True
+      register: ans
+
+    - debug:
+        msg: "{{ ans }}"
+
+
