@@ -1,4 +1,4 @@
-FROM jcpowermac/apb-examples
+FROM ansibleplaybookbundle/apb-base
 
 COPY playbooks /opt/apb/actions
 
